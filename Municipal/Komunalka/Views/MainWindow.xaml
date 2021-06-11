@@ -1,0 +1,208 @@
+﻿<Window x:Class="Komunalka.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Komunalka"
+        xmlns:ViewModels="clr-namespace:Komunalka.ViewModels" 
+        mc:Ignorable="d"
+        Title="Municipal : Комунальні послуги" Height="450" Width="900">
+	<Window.Resources>
+		<Style x:Key="ExpanderContent">
+			<Setter Property="Control.Width" Value="250" />
+		</Style>
+		<Style x:Key="ExpanderItem" TargetType="Expander">
+			<Setter Property="BorderThickness" Value="0,0,0,1" />
+			<Setter Property="BorderBrush" Value="#FFBBBBBB" />
+			<Setter Property="Padding" Value="5" />
+			<Setter Property="Background" Value="#FFFFFFFF" />
+		</Style>
+	</Window.Resources>
+	<DockPanel Background="#FFF8F8F8">
+		<DockPanel	DockPanel.Dock="Right"
+					Visibility="{Binding Path=NewDataBlockVisibility}"
+					Width="337"
+					Background="#FFFFFFFF">
+			<StackPanel DockPanel.Dock="Top" Margin="10,5">
+			    <TextBlock Text="Нові дані" TextAlignment="Center" FontWeight="Bold"/>
+				<Grid Margin="0,5">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*"/>
+					</Grid.ColumnDefinitions>
+					<TextBlock Grid.Row="0" Grid.Column="0" Text="Адреса" Margin="0,3,0,0" HorizontalAlignment="Right"/>
+					<ComboBox   Grid.Row="0" Grid.Column="1"
+								ItemsSource="{Binding Path=NewData_AddressList}"
+                                SelectedItem="{Binding Path=NewDataAddressList_SelectedItem}"
+                                Margin="5,0,0,5">
+						<ComboBox.ItemTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Path=AddressValue}"/>
+							</DataTemplate>
+						</ComboBox.ItemTemplate>
+					</ComboBox>
+					<TextBlock Grid.Row="1" Grid.Column="0" Text="За" Margin="0,3,0,0" HorizontalAlignment="Right"/>
+					<StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+						<ComboBox   ItemsSource="{Binding Path=MonthList}"
+									SelectedIndex="{Binding Path=PaymentMonthId}"
+								    Margin="5,0,0,0"/>
+						<ComboBox   ItemsSource="{Binding Path=YearList}"
+									SelectedIndex="{Binding Path=PaymentYearId}"
+									Margin="10,0"/>
+					</StackPanel>
+                </Grid>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Bottom" Margin="10,5">
+				<TextBlock Text="{Binding Path=TotalSumToPay}" HorizontalAlignment="Center"/>
+				<Button Content="Зберегти" Command="{Binding Path=CommandSave}"></Button>
+				<Button Content="Скинути" Command="{Binding Path=CommandReset}"></Button>
+			</StackPanel>
+			<ListBox Margin="10,0,10,0" 
+					 BorderBrush="#00000000" 
+					 ScrollViewer.VerticalScrollBarVisibility="Visible"
+					 ItemsSource="{Binding Path=Mod_NewDataCollect}"
+					 Background="#FFFFFFFF">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Expander Style="{StaticResource ExpanderItem}">
+                            <Expander.Header>
+                                <Grid Style="{StaticResource ExpanderContent}">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" Text="{Binding Path=ServiceName}" TextWrapping="Wrap"/>
+                                        <CheckBox Grid.Column="1" IsChecked="{Binding Path=Active}"/>
+                                    </Grid>
+                                    <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Visibility="{Binding Path=DifferenceVisibility}">
+                                        <TextBlock Text="{Binding Path=DifferenceValue}"/>
+                                        <TextBlock Text="{Binding Path=MeasureUnit}"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Path=PaySum}"/>
+                                        <TextBlock Text=" грн."/>
+                                    </StackPanel>
+                                </Grid>
+                            </Expander.Header>
+                            <Expander.Content>
+                                <StackPanel Margin="25,0,0,0" IsEnabled="{Binding Path=Active}">
+                                    <Grid Visibility="{Binding Path=CounterVisibility}">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <!--<RowDefinition Height="Auto"/>-->
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+										<StackPanel Grid.Row="0" Grid.ColumnSpan="3">
+											<StackPanel Orientation="Horizontal">
+												<TextBlock Text="Тариф: "/>
+												<TextBlock Text="{Binding Path=Rate1}"/>
+                                                <TextBlock Text="/" Visibility="{Binding Path=SlashBetweenRates}"/>
+                                                <TextBlock Text="{Binding Path=Rate2}"/>
+												<TextBlock Text="{Binding Path=MeasureUnit}"/>
+											</StackPanel>
+											<StackPanel Orientation="Horizontal" Visibility="{Binding Path=ThresholdValueVisibility}">
+												<TextBlock Text="Порогове значення: "/>
+												<TextBlock Text="{Binding Path=ThresholdValue}"/>
+												<TextBlock Text="{Binding Path=MeasureUnit}"/>
+											</StackPanel>
+											<TextBlock Text="Покази лічильника:"/>
+										</StackPanel>
+										<TextBox Grid.Row="1" Grid.Column="0" IsReadOnly="True" Text="{Binding Path=CounterValuePrev}"/>
+                                        <TextBlock Grid.Row="1" Grid.Column="1" Text=" : " Margin="5,0"/>
+                                        <TextBox Grid.Row="1" Grid.Column="2" Text="{Binding Path=CounterValueCurrent}"/>
+                                    </Grid>
+                                    <StackPanel	Orientation="Horizontal"
+												Visibility="{Binding Path=SubscriberFeeVisibility}"
+												Margin="0,3,0,0">
+                                        <TextBlock Text="Абонплата: "/>
+                                        <TextBox Text="{Binding Path=SubscriberFeeSum}" Width="100"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Expander.Content>
+                        </Expander>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+		</DockPanel>
+		<Menu DockPanel.Dock="Top">
+			<MenuItem Header="Тарифи"/>
+			<MenuItem Header="Налаштування"/>
+		</Menu>
+		<StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Background="#FFF0F0F0">
+			<TextBlock Text="Загальна сума: "/>
+			<TextBlock Text="{Binding Path=TotalSum}"/>
+			<TextBlock Text=" грн."/>
+		</StackPanel>
+		<StackPanel Margin="10,10,10,0">
+			<!--<DataGrid DataContext="{Binding Path=DG.DataContext}">
+			<DataGrid.Columns>
+					<DataGridTextColumn Header="Дата" Binding="{Binding Path=Valuedate}" />
+					<DataGridTextColumn Header="Е/енергія" Binding="{Binding Path=Electric}" />
+					<DataGridTextColumn Header="Газ" Binding="{Binding Path=Gas}" />
+					<DataGridTextColumn Header="УБПТ" Binding="{Binding Path=UBPT}" />
+					<DataGridTextColumn Header="ХВП" Binding="{Binding Path=HVP}" />
+					<DataGridTextColumn Header="ВГВ" Binding="{Binding Path=VGV}" />
+					<DataGridTextColumn Header="ГВП" Binding="{Binding Path=GVP}" />
+					<DataGridTextColumn Header="ЦО" Binding="{Binding Path=CO}" />
+					<DataGridTextColumn Header="Внески ЦПВГ" Binding="{Binding Path=VCPVG}" />
+					<DataGridTextColumn Header="Внески ХВП" Binding="{Binding Path=VHVP}" />
+					<DataGridTextColumn Header="Внески ЦО" Binding="{Binding Path=VCO}" />
+					<DataGridTextColumn Header="Розподіл газу" Binding="{Binding Path=RG}" />
+					<DataGridTextColumn Header="ВПВ" Binding="{Binding Path=VPV}" />
+				</DataGrid.Columns>
+			</DataGrid>-->
+			<StackPanel Orientation="Horizontal">
+				<TextBlock Text="Статистика за адресою" Margin="0,3,0,0"/>
+				<ComboBox   Grid.Row="0" Grid.Column="1"
+								ItemsSource="{Binding Path=StatisticAddressList}"
+                                SelectedItem="{Binding Path=StatisticAddressList_SelectedItem}"
+                                Margin="5,0,0,5">
+					<ComboBox.ItemTemplate>
+						<DataTemplate>
+							<TextBlock Text="{Binding Path=AddressValue}"/>
+						</DataTemplate>
+					</ComboBox.ItemTemplate>
+				</ComboBox>
+			</StackPanel>
+            <ListBox ItemsSource="{Binding Path=HP}"
+                     ScrollViewer.VerticalScrollBarVisibility="Visible"
+                     VerticalContentAlignment="Top">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Path=Header}"/>
+                            <ListBox ItemsSource="{Binding Path=Data}">
+                                
+                            </ListBox>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+			<!--<Grid Visibility="{Binding Path=ConfigVisibility}"></Grid>-->
+			<TextBlock Text="{Binding Path=TestText}"/>
+		</StackPanel>
+	</DockPanel>
+</Window>

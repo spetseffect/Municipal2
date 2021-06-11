@@ -1,0 +1,47 @@
+D:\Desktop\Municipal2\Municipal\KomunalkaDAL\bin\Debug\KomunalkaDAL.dll.config
+D:\Desktop\Municipal2\Municipal\KomunalkaDAL\bin\Debug\KomunalkaDAL.dll
+D:\Desktop\Municipal2\Municipal\KomunalkaDAL\bin\Debug\KomunalkaDAL.pdb
+D:\Desktop\Municipal2\Municipal\KomunalkaDAL\bin\Debug\EntityFramework.dll
+D:\Desktop\Municipal2\Municipal\KomunalkaDAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Desktop\Municipal2\Municipal\KomunalkaDAL\bin\Debug\EntityFramework.xml
+D:\Desktop\Municipal2\Municipal\KomunalkaDAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Desktop\Municipal2\Municipal\KomunalkaDAL\obj\Debug\KomunalkaDAL.csprojAssemblyReference.cache
+D:\Desktop\Municipal2\Municipal\KomunalkaDAL\obj\Debug\KomunalkaDAL.csproj.CoreCompileInputs.cache
+D:\Desktop\Municipal2\Municipal\KomunalkaDAL\obj\Debug\KomunalkaDAL.csproj.CopyComplete
+D:\Desktop\Municipal2\Municipal\KomunalkaDAL\obj\Debug\KomunalkaDAL.dll
+D:\Desktop\Municipal2\Municipal\KomunalkaDAL\obj\Debug\KomunalkaDAL.pdb
+D:\OneDrive - E-Consulting\Desktop\Municipal2\Municipal\KomunalkaDAL\bin\Debug\KomunalkaDAL.dll.config
+D:\OneDrive - E-Consulting\Desktop\Municipal2\Municipal\KomunalkaDAL\bin\Debug\KomunalkaDAL.dll
+D:\OneDrive - E-Consulting\Desktop\Municipal2\Municipal\KomunalkaDAL\bin\Debug\KomunalkaDAL.pdb
+D:\OneDrive - E-Consulting\Desktop\Municipal2\Municipal\KomunalkaDAL\bin\Debug\EntityFramework.dll
+D:\OneDrive - E-Consulting\Desktop\Municipal2\Municipal\KomunalkaDAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\OneDrive - E-Consulting\Desktop\Municipal2\Municipal\KomunalkaDAL\bin\Debug\EntityFramework.xml
+D:\OneDrive - E-Consulting\Desktop\Municipal2\Municipal\KomunalkaDAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\OneDrive - E-Consulting\Desktop\Municipal2\Municipal\KomunalkaDAL\obj\Debug\KomunalkaDAL.csprojResolveAssemblyReference.cache
+D:\OneDrive - E-Consulting\Desktop\Municipal2\Municipal\KomunalkaDAL\obj\Debug\KomunalkaDAL.csproj.CoreCompileInputs.cache
+D:\OneDrive - E-Consulting\Desktop\Municipal2\Municipal\KomunalkaDAL\obj\Debug\KomunalkaDAL.dll
+D:\OneDrive - E-Consulting\Desktop\Municipal2\Municipal\KomunalkaDAL\obj\Debug\KomunalkaDAL.pdb
+D:\Desktop\ШАГ\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\bin\Debug\KomunalkaDAL.dll.config
+D:\Desktop\ШАГ\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\bin\Debug\KomunalkaDAL.dll
+D:\Desktop\ШАГ\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\bin\Debug\KomunalkaDAL.pdb
+D:\Desktop\ШАГ\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\bin\Debug\EntityFramework.dll
+D:\Desktop\ШАГ\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Desktop\ШАГ\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\bin\Debug\EntityFramework.xml
+D:\Desktop\ШАГ\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Desktop\ШАГ\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\obj\Debug\KomunalkaDAL.csprojAssemblyReference.cache
+D:\Desktop\ШАГ\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\obj\Debug\KomunalkaDAL.csproj.CoreCompileInputs.cache
+D:\Desktop\ШАГ\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\obj\Debug\KomunalkaDAL.csproj.CopyComplete
+D:\Desktop\ШАГ\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\obj\Debug\KomunalkaDAL.dll
+D:\Desktop\ШАГ\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\obj\Debug\KomunalkaDAL.pdb
+D:\Desktop\IT_STEP\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\bin\Debug\KomunalkaDAL.dll.config
+D:\Desktop\IT_STEP\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\bin\Debug\KomunalkaDAL.dll
+D:\Desktop\IT_STEP\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\bin\Debug\KomunalkaDAL.pdb
+D:\Desktop\IT_STEP\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\bin\Debug\EntityFramework.dll
+D:\Desktop\IT_STEP\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Desktop\IT_STEP\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\bin\Debug\EntityFramework.xml
+D:\Desktop\IT_STEP\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Desktop\IT_STEP\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\obj\Debug\KomunalkaDAL.csprojAssemblyReference.cache
+D:\Desktop\IT_STEP\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\obj\Debug\KomunalkaDAL.csproj.CoreCompileInputs.cache
+D:\Desktop\IT_STEP\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\obj\Debug\KomunalkaDAL.csproj.CopyComplete
+D:\Desktop\IT_STEP\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\obj\Debug\KomunalkaDAL.dll
+D:\Desktop\IT_STEP\###\Sync\10_CourseProject\Municipal2\Municipal\KomunalkaDAL\obj\Debug\KomunalkaDAL.pdb
